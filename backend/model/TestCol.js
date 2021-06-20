@@ -4,7 +4,8 @@ let mySchema = new mongoose.Schema({
     name:String,
     email:String,
     sex:String,
-    password:String
+    password:String,
+    contact:String
 })
 
 module.exports=mongoose.model('labs',mySchema)

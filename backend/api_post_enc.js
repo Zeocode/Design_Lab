@@ -20,6 +20,7 @@ app.post('/postenc',mybodyParser,function(req,res)
 { 
     name = req.body.name;
     email = req.body.email;
+    contact = req.body.contact;
 
     var myCipher= mycrypto.createCipher (algo,key); 
 // encrypt the password Advanced Encryption Standard 256 using UTF8 & hex 
@@ -34,7 +35,8 @@ const data = new TestCol({
     _id: new mongooseApp.Types.ObjectId(),
     name:this.name,
     email:this.email,
-    password: this.password
+    password: this.password,
+    contact: this.contact
 });
 
 data.save().then((result)=>{
